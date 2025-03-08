@@ -1,0 +1,103 @@
+.shop{
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background: url("images/14.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.shop-content{
+  position: absolute;
+  width: 90%;
+  /* z-index: 1; */
+}
+.shop-overlay{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.shop-row{
+  transition: scale(1.1);
+}
+.shop-row img:hover {
+  transition: 0.5s ease-in;
+  transform: scale(1.2) rotate(5deg);
+
+}
+.point-s {
+  background-color: black;
+}
+.point-s::after {
+  background-color: var(--theme2) !important;
+  right: 50px;
+}
+.point-s::before {
+  background-color: var(--theme2) !important;
+  left: 50px;
+}
+.name {
+  margin: 20px 0px;
+  font-family: var(--theme-txt);
+}
+.price {
+  margin: 20px 0px;
+}
+.price .shop-btn {
+  outline: none;
+  padding: 5px 30px;
+  border: 1px solid var(--theme1);
+  color: var(--theme1);
+  background-color: white;
+
+  &:hover {
+    background-color: var(--theme1);
+    color: white;
+    transition: 0.5s;
+  }
+}
+.page-numbers i {
+  color: black;
+}
+.page-numbers button {
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: 1px solid var(--theme1);
+  font-family: var(--theme-txt);
+
+  &:hover {
+    background-color: var(--theme1);
+    color: white;
+    transition: 0.4s;
+  }
+  .page-numbers button:hover i {
+    color: white !important;
+  }
+
+
+}
+
+
+/* responsive media queries --------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+  .shop-row > div {
+    padding: 0px !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .shop-info {
+    padding: 48px 20px !important;
+  }
+  .shop-info-child {
+    padding: 0px !important;
+  }
+  .page-numbers-child {
+    width: auto !important;
+  }
+  
+  
+}
